@@ -31,7 +31,7 @@ function generatePassword(){
   
   
   
-  passLength = prompt("Enter paspassword length 8-128");
+  passLength = prompt("Enter password length 8-128");
   
     if(passLength >= 8 && passLength <= 128){
       confirmPrompt(); // Prompts the user for the criteria 
