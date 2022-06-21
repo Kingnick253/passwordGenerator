@@ -20,8 +20,9 @@ var criteriaArry ={ // creates object for all the critera that we are going
 
 }
 
-function generatePassword(){
-  console.log("button work")
+function generatePassword(event){
+  
+  
   // 1.prompt the user for password criteria
   passLength = prompt("Enter paspassword length 8-128");
 
@@ -41,12 +42,13 @@ function generatePassword(){
           length++
 
         }
-        if(passLCase === true && length<passLength){
-          result = result + criteriaArry.lowerCase[Math.floor(Math.random() * 26)]
+        if(passLCase === true && length<passLength){// if tthe user confirms that they want LowerCase
+          result = result + criteriaArry.lowerCase[Math.floor(Math.random() * 26)]// Randomly picks Lower case letters from my lowerCase array
           length++
         }
-        if(passSpecial === true && length<passLength){
-          result = result +criteriaArry.speicalChar[Math.floor(Math.random() * 12)]
+        
+        if(passSpecial === true && length<passLength){// If the user confirms that they want Special Characters. This is will 
+          result = result +criteriaArry.speicalChar[Math.floor(Math.random() * 12)]// Randomly picks Special Characters from my speicalChar array
           length++
         }
         
@@ -80,7 +82,8 @@ function confirmPrompt(){
 
 }
 // Write password to the #password input
-function writePassword() {
+function writePassword(event) {
+  event.preventDefault();
   var password = generatePassword();
   var passwordText = document.querySelector("#password");
 
