@@ -62,7 +62,7 @@ function generatePassword(){
 
         } 
       
-    }else{
+    }else{// informs user that they did not enter the right creditals
       alert("invaild input");
       generatePassword();
     }
